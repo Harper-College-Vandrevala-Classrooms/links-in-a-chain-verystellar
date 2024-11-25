@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/links-in-a-chain-verystellar.iml" filepath="$PROJECT_DIR$/.idea/links-in-a-chain-verystellar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/links-in-a-chain-verystellar.main.iml" filepath="$PROJECT_DIR$/.idea/modules/links-in-a-chain-verystellar.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/links-in-a-chain-verystellar.test.iml" filepath="$PROJECT_DIR$/.idea/modules/links-in-a-chain-verystellar.test.iml" />
+    </modules>
+  </component>
+</project>
