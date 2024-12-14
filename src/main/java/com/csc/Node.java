@@ -18,6 +18,15 @@ public class Node {
 
   }
 
+  public void prepend(Node n){
+    if(this.prev == null){
+      this.prev = n;
+      n.next = this;
+    } else {
+      throw new RuntimeException("Node already exists at this position");
+    }
+  }
+
   public Node() {
     chain = null;
     next = null;
@@ -35,12 +44,22 @@ public class Node {
   public void setNext(Node next) {
     this.next = next;
   }
+  public int size(){
+    int count = 0;
+    Node n = this;
+    while(n.getNext() != null){
+      n = n.getNext();
+      count++;
+    }
+    return count;
+  }
 
   public static void main(String[] args) {
     Node n = new Node();
     ChainLink link1 = new ChainLink("red");
     ChainLink link2 = new ChainLink("blue");
     ChainLink link3 = new ChainLink("green");
+    ChainLink link4 = new ChainLink("yellow");
     n.setChain(link1);
     Node n2 = new Node(link2,n);
     try {
@@ -55,6 +74,12 @@ public class Node {
     Node retrievedNode = n2.getNext();
     ChainLink retrievedLink = retrievedNode.getChain();
     System.out.println(retrievedLink.color);
+    System.out.println(n.size()); //should be 2
+    Node n4 = new Node();
+    n4.setChain(link4);
+    n.prepend(n4);
+    System.out.println(n4.getChain().color);
+    System.out.println(n4.getNext().getChain().color);
 
   }
 
